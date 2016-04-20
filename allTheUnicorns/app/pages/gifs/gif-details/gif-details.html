@@ -1,0 +1,16 @@
+<ion-navbar *navbar>
+  <button menuToggle *ngIf="!selectedGif">
+    <ion-icon name="menu"></ion-icon>
+  </button>
+  <ion-title>GIF Details</ion-title>
+</ion-navbar>
+
+<ion-content>
+  <div *ngIf="selectedGif" class="selection">
+		<ion-card>
+			<ion-card-content>
+			    <img src="{{selectedGif.images.original.url}}">
+			</ion-card-content>
+		</ion-card>
+  </div>
+</ion-content>
